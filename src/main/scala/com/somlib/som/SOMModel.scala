@@ -1,6 +1,7 @@
 package com.somlib.som
 
 import breeze.linalg.Vector
+import com.somlib.som.Exceptions.UndefinedPropertyException
 
 /**
   * Created by arvind on 9/2/16.
@@ -22,4 +23,9 @@ class SOMModel(neurons: Array[Neuron], nRows: Int, nCols: Int) {
   }
 
   def apply(id: Int): Neuron = neurons(id)
+
+  def setProperty(key: String, value: String): Unit = {
+    if(Properties.isValidProperty(key)) Properties.setProperty(key, value)
+    else throw new UndefinedPropertyException
+  }
 }
