@@ -43,4 +43,9 @@ object Utils {
     takeSample(array, sampleSize, 0, array.length)
   }
 
+  def singleSample[A](array: Array[A]): A = {
+    val rand = new Random(System.currentTimeMillis())
+    array(rand.nextInt(array.length))
+  }
+
 }
