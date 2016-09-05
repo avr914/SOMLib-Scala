@@ -5,7 +5,7 @@ import breeze.linalg.Vector
 /**
   * Created by arvind on 9/2/16.
   */
-class Neuron(_id: Int, _x: Int, _y: Int, _point: Vector[Double]) {
+class Neuron(_id: Int, _x: Int, _y: Int, _point: Vector[Double]) extends Serializable {
   val id = _id
   val x = _x
   val y = _y
