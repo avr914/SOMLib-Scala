@@ -9,18 +9,7 @@ import scala.util.Random
   * Created by arvind on 9/4/16.
   */
 object Utils {
-  /*
-  def sample(n, lower, upper):
-    result = []
-    pool = {}
-    for _ in xrange(n):
-        i = random.randint(lower, upper)
-        x = pool.get(i, i)
-        pool[i] = pool.get(lower, lower)
-        lower += 1
-        result.append(x)
-    return result
-    */
+
   def takeSample[A](array: Array[A], sampleSize: Int, lowerLimit: Int, upperLimit: Int): Array[A] = {
     var indices: ArrayBuffer[Int] = ArrayBuffer.empty[Int]
     var pool: HashMap[Int, Int] = HashMap.empty[Int, Int]
